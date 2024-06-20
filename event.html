@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>www.leofatprint.com</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<style>
+
+  		.title {
+  			width: 100%;
+  			max-width: 854px;
+  			margin: 0 auto;
+  		}
+
+  		.caption {
+  			width: 100%;
+  			max-width: 854px;
+  			margin: 0 auto;
+  			padding: 20px 0;
+  		}
+
+  		.vid-main-wrapper {
+  			width: 100%;
+  			max-width: 1100px;
+  			min-width: 440px;
+  			background: #fff;
+  			margin: 0 auto;
+  		}
+
+
+  		/*  VIDEO PLAYER CONTAINER
+ 		############################### */
+  		.vid-container {
+		    position: relative;
+		    padding-bottom: 30%;
+		    padding-top: 30px; 
+		    height: 0; 
+        width:70%;
+        float:left;
+		}
+		 
+		.vid-container iframe,
+		.vid-container object,
+		.vid-container embed {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    min-height: 360px;
+		}
+
+
+		/*  VIDEOS PLAYLIST 
+ 		############################### */
+		.vid-list-container {
+			width: 30%;
+      height:360px;
+			overflow: hidden;
+      float:right;
+		}
+
+    .vid-list-container:hover, .vid-list-container:focus {
+       overflow-y: auto;
+     }
+
+		ol#vid-list {
+      margin:0;
+      padding:0;
+      background: #222;
+		}
+
+    ol#vid-list li {
+		  list-style: none;
+    }
+
+    ol#vid-list li a {
+      text-decoration: none;
+      background-color: #222;
+      height:55px;
+      display:block;
+      padding:10px;
+    }
+
+    ol#vid-list li a:hover {
+      background-color:#666666
+    }
+
+		.vid-thumb {
+      float:left;
+			margin-right: 8px;
+		}
+
+    .active-vid { 
+      background:#3A3A3A;
+    }
+
+		#vid-list .desc {
+			color: #CACACA;
+			font-size: 13px;
+			margin-top:5px;
+		}
+
+
+		@media (max-width: 624px) {
+			body {
+				margin: 15px;
+			}
+			.caption {
+				margin-top: 40px;
+			}
+			.vid-list-container {
+				padding-bottom: 20px;
+			}
+
+		}
+    
+  body {
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+    padding: 40px 0;
+}
+
+.container.gallery-container {
+    background-color: #fff;
+    min-height: 100vh;
+    padding: 30px 50px;
+}
+
+.tz-gallery {
+    padding: 40px;
+}
+
+/* Override bootstrap column paddings */
+.tz-gallery .row > div {
+    padding: 2px;
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+}
+
+.tz-gallery .lightbox:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -13px;
+    margin-left: -13px;
+    opacity: 0;
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Glyphicons Halflings';
+    content: '\e003';
+    pointer-events: none;
+    z-index: 9000;
+    transition: 0.4s;
+}
+
+
+.tz-gallery .lightbox:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #880E0D;
+    content: '';
+    transition: 0.4s;
+}
+
+.tz-gallery .lightbox:hover:after,
+.tz-gallery .lightbox:hover:before {
+    opacity: 1;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+@media(max-width: 768px) {
+    body {
+        padding: 0;
+    }
+}
+</style>
+<body>
+
+
+  <!-- ======= Header/Navbar ======= -->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="navbar-brand text-brand" href="index.html" style="color: #880E0D; font-size: 50px;">LEOFAT</a>
+
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style="font-size: large;">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" style="font-size: large;">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="leofat-print.html" style="font-size: large;">Leofat Print</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="leofat-event.html" style="font-size: large;">Leofat Events</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="web.html" style="font-size: large;">Web.Dev</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: larger;">Gallery</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item " href="print.html" style="font-size: large;">Leofat Print</a>
+              <a class="dropdown-item " href="event.html" style="font-size: large;">Leofat Events</a>
+              <a class="dropdown-item " href="leo.html" style="font-size: large;">Leo's Treat</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html" style="font-size: large;">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav><!-- End Header/Navbar -->
+
+  
+  <main id="main">
+
+    <!-- ======= Intro Single ======= -->
+    <section class="intro-single">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-8">
+            <div class="title-single-box">
+              <h1 class="title-single">Beautifying Events</h1>
+              <span class="color-text-a">Experience Beauty at its finnest</span>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Gallery - Event
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Intro Single-->
+
+    <div class="vid-main-wrapper clearfix">
+
+      <!-- THE YOUTUBE PLAYER -->
+  <div class="vid-container">
+      <iframe id="vid_frame" src="https://www.youtube.com/embed/cOSEOYi9JS4?rel=0&showinfo=0&autohide=1" frameborder="0" width="560" height="315"></iframe>
+  </div>
+
+  <!-- THE PLAYLIST -->
+  <div class="vid-list-container">
+        <ol id="vid-list">
+          <li>
+            <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/cOSEOYi9JS4?autoplay=1&rel=0&showinfo=0&autohide=1'">
+              <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/cOSEOYi9JS4/default.jpg" /></span>
+              <div class="desc">WeatherBeater™ Product Video</div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/9P7mEf4bilg?autoplay=1&rel=0&showinfo=0&autohide=1'">
+              <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/9P7mEf4bilg/default.jpg" /></span>
+              <div class="desc">X-act Contour® Product Video</div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/KHxNpXovl58?autoplay=1&rel=0&showinfo=0&autohide=1'">
+              <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/KHxNpXovl58/default.jpg" /></span>
+              <div class="desc">GearBox® Product Video</div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/D_a2UBGsePQ?autoplay=1&rel=0&showinfo=0&autohide=1'">
+              <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/D_a2UBGsePQ/default.jpg" /></span>
+              <div class="desc">Mud Guards Product Video</div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/vYoh2IgoBXg?autoplay=1&rel=0&showinfo=0&autohide=1'">
+              <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/vYoh2IgoBXg/default.jpg" /></span>
+              <div class="desc">Wheel Well Guards Product Video</div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/RTHI_uGyfTM?autoplay=1&rel=0&showinfo=0&autohide=1'">
+              <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/RTHI_uGyfTM/default.jpg" /></span>
+              <div class="desc">Cargo Liner Product Video</div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/EvTjAjLNphE?autoplay=1&rel=0&showinfo=0&autohide=1'">
+              <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/EvTjAjLNphE/default.jpg" /></span>
+              <div class="desc">Husky Liners Products</div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/-Qpc79oaJQg?autoplay=1&rel=0&showinfo=0&autohide=1'">
+              <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/-Qpc79oaJQg/default.jpg" /></span>
+              <div class="desc">Custom Molded Mud Guards</div>
+            </a>
+          </li>
+          
+        </ul>
+   </div>
+
+
+</div>
+
+   <!-- =======  Blog Grid ======= -->
+   <section id="portfolio" class="portfolio section">
+
+    <!-- Section Title -->
+
+    <div class="container gallery-container">
+    
+      <div class="tz-gallery">
+  
+          <div class="row">
+  
+              <div class="col-sm-12 col-md-4">
+                  <a class="lightbox" href="assets/img/post 51.jpg">
+                      <img src="assets/img/post 5 (1).png" alt="Bridge">
+                  </a>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                  <a class="lightbox" href="assets/img/post 52.jpg">
+                      <img src="assets/img/post 5 (2).png" alt="Park">
+                  </a>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                  <a class="lightbox" href="assets/img/post 53.jpg">
+                      <img src="assets/img/post 5 (3).png" alt="Tunnel">
+                  </a>
+              </div>
+              <div class="col-sm-12 col-md-8">
+                  <a class="lightbox" href="assets/img/post 4.jpg">
+                      <img src="assets/img/post 4.jpg" alt="Traffic">
+                  </a>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                  <a class="lightbox" href="assets/img/post 54.jpg">
+                      <img src="assets/img/post 5 (4).png" alt="Coast">
+                  </a>
+              </div> 
+              <div class="col-sm-6 col-md-4">
+                  <a class="lightbox" href="assets/img/post 50.jpg">
+                      <img src="assets/img/post 5 (0).png" alt="Rails">
+                  </a>
+              </div>
+  
+          </div>
+  
+      </div>
+  
+  </div>
+
+  </section><!-- /Portfolio Section -->
+
+><!-- End Blog Grid-->
+
+</main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="nav-footer">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="about.html">About</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="leofat-print.html">Leofat Print</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="leofat-event.html">Leofat Events</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="leo.html">Leo's Treat</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="socials-a">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="https://web.facebook.com/?_rdc=1&_rdr">
+                  <i class="bi bi-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://x.com/LeoFatprints">
+                  <i class="bi bi-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/">
+                  <i class="bi bi-instagram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/feed/">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright-footer">
+            <p class="copyright color-text-a">
+              &copy; Copyright
+              <span class="color-a">LEOFAT PRINT</span> All Rights Reserved.
+            </p>
+          </div>
+          <div class="credits">
+            Designed by <a href="index.html">Leofat Print</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+<script>
+  /*JS FOR SCROLLING THE ROW OF THUMBNAILS*/ 
+$(document).ready(function () {
+  $('.vid-item').each(function(index){
+    $(this).on('click', function(){
+      var current_index = index+1;
+      $('.vid-item .thumb').removeClass('active');
+      $('.vid-item:nth-child('+current_index+') .thumb').addClass('active');
+    });
+  });
+});
+</script>
+
+</body>
+
+</html>
